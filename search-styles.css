@@ -1,0 +1,9 @@
+.flight{
+    border: 2px solid #ffc107;
+}
+
+.flight-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
