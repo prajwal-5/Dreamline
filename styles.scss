@@ -1,0 +1,85 @@
+$yellow-background: #ffc107;
+$white-background: #fff;
+$black-shade: black;
+
+html{
+   background: $yellow-background;
+   background: radial-gradient($yellow-background 45%, $black-shade);
+}
+
+body{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   background: url(./assets/background.jpeg) no-repeat center;
+   filter: blur();
+   background-size: cover;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+section{
+    width: 85%;
+    border: 5px solid $yellow-background;
+    border-radius: 1rem;
+    background: $white-background;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: $black-shade;
+}
+
+.form-select, .form-control{
+    border: 2px solid $yellow-background;
+}
+
+.form-select:focus, .form-control:focus, .form-select:focus-visible, .form-control:focus-visible, option::slotted(){
+    border-color: $yellow-background;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem $yellow-background;
+}
+
+a:hover{
+    color: $black-shade;
+    text-decoration: underline;
+}
+
+footer{
+    width: 100%;
+    background: $yellow-background;
+    margin: 0px;
+}
+
+@media only screen and (min-width: 700px){
+    section{
+        width: 50%;
+    }
+
+    .desktop-view{
+        flex-direction: row;
+    }
+}
+
+.main-area{
+    background: $white-background;
+    opacity: 0.3;
+}
