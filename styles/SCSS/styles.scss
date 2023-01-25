@@ -1,6 +1,7 @@
 $yellow-background: #ffc107;
 $white-background: #fff;
 $black-shade: black;
+$background-picture: url(../../assets/background.jpeg);
 
 html{
    background: $yellow-background;
@@ -14,7 +15,7 @@ body{
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
-   background: url(./assets/background.jpeg) no-repeat center;
+   background: $background-picture no-repeat center;
    filter: blur();
    background-size: cover;
 }
@@ -48,15 +49,50 @@ a{
     color: $black-shade;
 }
 
-.form-select, .form-control{
+%warning-border{
     border: 2px solid $yellow-background;
 }
 
-.form-select:focus, .form-control:focus, .form-select:focus-visible, .form-control:focus-visible, option::slotted(){
+.form-select{
+    @extend %warning-border;
+}
+
+.form-control{
+    @extend %warning-border;
+}
+
+%warning-background {
     border-color: $yellow-background;
     outline: 0;
     box-shadow: 0 0 0 0.25rem $yellow-background;
 }
+
+.form-select{
+    &:focus{
+        @extend %warning-background;
+    }
+
+    &:focus-visible{
+        @extend %warning-background;
+    }
+}
+
+.form-control{
+    &:focus{
+        @extend %warning-background;
+    }
+
+    &:focus-visible{
+        @extend %warning-background;
+    }
+}
+
+option{
+    &::slotted{
+        @extend %warning-background;
+    }
+}
+
 
 a:hover{
     color: $black-shade;

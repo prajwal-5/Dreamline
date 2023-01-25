@@ -1,0 +1,11 @@
+@import "./styles.scss";
+
+.flight{
+    border: 2px solid $yellow-background;
+}
+
+.flight-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "dreamline",
+  "version": "1.0.0",
+  "description": "dreamline",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch ./styles/SCSS/styles.scss:./styles/CSS/styles.css ./styles/SCSS/search-styles.scss:./styles/CSS/search-styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prajwal-5/prajwal-5.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prajwal-5/prajwal-5.github.io/issues"
+  },
+  "homepage": "https://github.com/prajwal-5/prajwal-5.github.io#readme"
+}
